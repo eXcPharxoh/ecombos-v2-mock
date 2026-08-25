@@ -20,6 +20,7 @@
   var film = document.getElementById("film");
   var reel = document.getElementById("reel");
   var typeStill = document.getElementById("type-still");
+  var motionBadge = document.getElementById("motion-badge");
   var figIndex = document.getElementById("fig-index");
   var figName = document.getElementById("fig-name");
   var figSteps = document.querySelectorAll("#fig-steps li");
@@ -49,6 +50,8 @@
   function setFig(i) {
     figIndex.textContent = "FIG " + FIGS[i].id;
     figName.textContent = FIGS[i].name;
+    stage.dataset.fig = FIGS[i].id;
+    if (motionBadge) motionBadge.hidden = FIGS[i].id !== "0.4";
     figSteps.forEach(function (dot, idx) {
       dot.classList.toggle("is-on", idx === i);
     });
@@ -312,7 +315,13 @@
     if (reducedMotion()) return;
     var start = function () {
       import(THREE_URL)
-        .then(initKnot)
+        .then(function (THREE) {
+          try {
+            initKnot(THREE);
+          } catch (e) {
+            /* WebGL unavailable — poster still stands */
+          }
+        })
         .catch(function () {});
     };
     if ("requestIdleCallback" in window) {

@@ -481,6 +481,25 @@ ul {
   transform: scale(1.55);
 }
 
+.motion-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 3;
+  margin: 0;
+  padding: 6px 8px;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--canvas) 72%, transparent);
+  color: var(--volt);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+
+.motion-badge[hidden] {
+  display: none;
+}
+
 .stage-chrome {
   position: absolute;
   left: 16px;
