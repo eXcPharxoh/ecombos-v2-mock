@@ -22,6 +22,7 @@
   var typeStill = document.getElementById("type-still");
   var figIndex = document.getElementById("fig-index");
   var figName = document.getElementById("fig-name");
+  var figSteps = document.querySelectorAll("#fig-steps li");
   var fileInput = document.getElementById("file");
   var knotCanvas = document.getElementById("knot");
   var skuThumbs = document.querySelectorAll(".sku");
@@ -48,6 +49,9 @@
   function setFig(i) {
     figIndex.textContent = "FIG " + FIGS[i].id;
     figName.textContent = FIGS[i].name;
+    figSteps.forEach(function (dot, idx) {
+      dot.classList.toggle("is-on", idx === i);
+    });
   }
 
   function show(el) {
@@ -80,6 +84,51 @@
     }
   }
 
+  function playReel() {
+    reel.preload = "auto";
+    try {
+      reel.currentTime = 0;
+    } catch (e) {
+      /* ignore */
+    }
+    var play = reel.play();
+    if (play && play.catch) play.catch(function () {});
+  }
+
+  function waitForReel(token) {
+    var min = reducedMotion() ? 400 : 5200;
+    var max = reducedMotion() ? 800 : 9000;
+    var started = Date.now();
+    return new Promise(function (resolve) {
+      var done = false;
+      var poll;
+      function finish() {
+        if (done) return;
+        done = true;
+        if (poll) window.clearInterval(poll);
+        reel.removeEventListener("ended", onEnded);
+        reel.removeEventListener("error", onEnded);
+        resolve(token === runToken);
+      }
+      function onEnded() {
+        var remain = Math.max(0, min - (Date.now() - started));
+        window.setTimeout(finish, remain);
+      }
+      reel.addEventListener("ended", onEnded);
+      reel.addEventListener("error", onEnded);
+      poll = window.setInterval(function () {
+        if (token !== runToken) {
+          window.clearInterval(poll);
+          finish();
+        }
+      }, 100);
+      window.setTimeout(function () {
+        window.clearInterval(poll);
+        finish();
+      }, max);
+    });
+  }
+
   function runChoreography() {
     var token = ++runToken;
     running = true;
@@ -87,42 +136,28 @@
     return (async function () {
       show(lcp);
       setFig(0);
-      if (!(await wait(reducedMotion() ? 200 : 1100, token))) return;
+      if (!(await wait(reducedMotion() ? 240 : 1200, token))) return;
 
       show(grid);
       setFig(1);
-      if (!(await wait(reducedMotion() ? 280 : 2000, token))) return;
+      if (!(await wait(reducedMotion() ? 320 : 2400, token))) return;
 
       show(film);
       setFig(2);
-      if (!(await wait(reducedMotion() ? 280 : 1600, token))) return;
+      if (!(await wait(reducedMotion() ? 320 : 2400, token))) return;
 
       show(reel);
       setFig(3);
-      try {
-        reel.currentTime = 0;
-        var play = reel.play();
-        if (play && play.catch) play.catch(function () {});
-      } catch (e) {
-        /* autoplay can fail; still advance */
-      }
-      await new Promise(function (resolve) {
-        var done = false;
-        function finish() {
-          if (done) return;
-          done = true;
-          reel.removeEventListener("ended", finish);
-          resolve();
-        }
-        reel.addEventListener("ended", finish);
-        window.setTimeout(finish, reducedMotion() ? 400 : 7000);
-      });
-      if (token !== runToken) return;
+      playReel();
+      if (!(await waitForReel(token))) return;
 
       show(typeStill);
       setFig(4);
+      stopReel();
       running = false;
-    })();
+    })().catch(function () {
+      running = false;
+    });
   }
 
   function onFiles(files) {
@@ -154,6 +189,7 @@
 
   stage.addEventListener("click", function (e) {
     if (e.target.closest("a, button")) return;
+    if (running) return;
     runChoreography();
   });
 
@@ -209,10 +245,10 @@
 
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera(32, 1, 0.1, 40);
-    camera.position.set(0, 0.15, 6.2);
+    camera.position.set(0, 0.12, 5.6);
 
     var knot = new THREE.Mesh(
-      new THREE.TorusKnotGeometry(1.35, 0.38, 180, 28),
+      new THREE.TorusKnotGeometry(1.55, 0.42, 180, 28),
       new THREE.MeshStandardMaterial({
         color: 0xc4a35a,
         metalness: 1,

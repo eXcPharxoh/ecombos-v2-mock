@@ -115,20 +115,22 @@ ul {
 }
 
 .skip-link {
-  position: absolute;
-  left: var(--gutter);
-  top: -40px;
-  z-index: 90;
-  padding: 8px 12px;
+  position: fixed;
+  left: 16px;
+  top: -72px;
+  z-index: 100;
+  padding: 10px 14px;
   background: var(--volt);
   color: var(--canvas);
   border-radius: var(--btn);
   font-family: var(--mono);
   font-size: 12px;
+  font-weight: 500;
 }
 
-.skip-link:focus {
-  top: 8px;
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 12px;
 }
 
 .eyebrow {
@@ -390,7 +392,7 @@ ul {
 
 .stage-poster {
   position: absolute;
-  inset: 16px 16px 52px;
+  inset: 22px 22px 58px;
   border-radius: var(--card);
   overflow: hidden;
   background: var(--canvas);
@@ -404,12 +406,14 @@ ul {
   height: 100%;
   object-fit: cover;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.45s ease, visibility 0.45s ease;
 }
 
 .layer.is-on {
   opacity: 1;
+  visibility: visible;
 }
 
 .layer-grid {
@@ -481,13 +485,14 @@ ul {
   position: absolute;
   left: 16px;
   right: 16px;
-  bottom: 12px;
+  bottom: 10px;
   z-index: 2;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
+  gap: 10px;
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.12em;
 }
 
@@ -496,6 +501,25 @@ ul {
   display: flex;
   gap: 10px;
   color: var(--volt);
+}
+
+.fig-steps {
+  display: flex;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fig-steps li {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--hairline);
+}
+
+.fig-steps li.is-on {
+  background: var(--volt);
 }
 
 .fig-meta {
