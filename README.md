@@ -1,2 +1,1 @@
-# ecombos-v2-mock
-Design mock of a 2026 EcomBos homepage (AURELIA-2703). Not production.
+Open `index.html` in a browser, or enable GitHub Pages from the repository root (`/`).
