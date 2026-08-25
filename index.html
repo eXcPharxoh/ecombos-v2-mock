@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#0A0A0A" />
     <meta name="robots" content="noindex" />
-    <title>EcomBos — AI Ads &amp; UGC, Created in Minutes</title>
+    <title>EcomBos — AURELIA-2703 · Drop one product. Get the whole campaign.</title>
     <meta
       name="description"
-      content="The creative studio for ecommerce. Generate scroll-stopping AI ads, UGC videos, and product visuals in minutes — no agency, no studio, no shoot."
+      content="Live job AURELIA-2703 on EcomBos: drop one product photo and get the packshot, Mediterranean film, architecture still, and 4K clasp — one necklace, five worlds."
     />
     <link rel="canonical" href="https://ecombos.ai/" />
     <link rel="icon" type="image/png" href="https://ecombos.ai/eb-logo.png" />
@@ -154,7 +154,7 @@
             <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="var(--volt)" stroke-width="2" aria-hidden="true">
               <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
             </svg>
-            1.4M creatives created this month
+            AURELIA-2703 · live on this page
           </span>
         </div>
         <span class="tick">
@@ -172,9 +172,10 @@
         <div class="hero-grid">
           <article class="film" id="featured-film">
             <video
+              id="hero-reel"
               class="media-fill js-autoplay"
               src="https://ecombos.ai/hv2-videos/aurelia-hero.mp4"
-              poster="https://ecombos.ai/hv2-videos/aurelia-hero.jpg"
+              poster="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/4832f1bcac19e0.jpg"
               muted
               loop
               playsinline
@@ -183,8 +184,12 @@
             ></video>
             <div class="film-scrim"></div>
             <div class="film-top">
-              <span class="hud-pill">● FEATURED FILM</span>
+              <span class="hud-pill">● LIVE JOB · AURELIA-2703</span>
               <span class="rec-label"><span class="dot pulse"></span>REC · 4K</span>
+            </div>
+            <div class="job-progress" aria-hidden="true">
+              <span id="job-status">RENDERING WORLDS</span>
+              <i><b id="job-bar"></b></i>
             </div>
             <div class="film-body">
               <div class="film-copy">
@@ -193,60 +198,76 @@
                   ECOMBOS — CREATIVE STUDIO FOR ECOMMERCE
                 </p>
                 <h1 id="hero-title">
-                  AI ads &amp; UGC,<br />
-                  <em>created in minutes.</em>
+                  Drop one product.<br />
+                  <em>Get the whole campaign.</em>
                 </h1>
                 <div class="hero-ctas">
-                  <a class="btn-volt btn-cta" href="https://ecombos.ai/ai-studio">
-                    Start creating now
+                  <button class="btn-volt btn-cta" type="button" data-open-file>
+                    Drop a product photo
                     <span class="cta-arrow" aria-hidden="true">
                       <svg viewBox="0 0 24 24" fill="none" stroke="var(--volt)" stroke-width="2.5">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14" />
                       </svg>
                     </span>
-                  </a>
-                  <a class="btn-ghost" href="https://ecombos.ai/ai-studio">
+                  </button>
+                  <button class="btn-ghost" type="button" data-run-job>
                     <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="var(--volt)" stroke-width="2" aria-hidden="true">
-                      <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                      <path d="M8 5v14l11-7z" />
                     </svg>
-                    Open AI Studio
-                  </a>
+                    Watch AURELIA run
+                  </button>
                 </div>
               </div>
               <aside class="film-hud" aria-hidden="true">
-                <p>AURELIA · SS26<br />FILM 01 / 05<br />SEEDANCE 2.0</p>
+                <p>AURELIA-2703<br /><span id="film-index">FILM 01 / 05</span><br />SEEDANCE 2.0</p>
                 <div class="worlds-chip">
                   <div>● 5 WORLDS</div>
                   <div>ONE NECKLACE · ONE PROMPT</div>
                 </div>
-                <p class="timecode">00:10 · 4K · 60FPS</p>
+                <p class="timecode" id="timecode">00:00 · 4K · 60FPS</p>
               </aside>
               <p class="film-hud-mobile">
-                <span>AURELIA · SS26 · FILM 01/05</span>
-                <span>00:10 · 4K</span>
+                <span>AURELIA-2703 · LIVE JOB</span>
+                <span id="timecode-mobile">00:00 · 4K</span>
               </p>
             </div>
-            <img class="packshot" id="packshot" alt="" hidden />
+            <img
+              class="packshot"
+              id="packshot"
+              src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/2b7cf7ba6ce78e.png"
+              alt="AURELIA gold collar packshot"
+            />
             <input id="packshot-file" class="sr-only" type="file" accept="image/*" />
           </article>
 
           <div class="hero-tiles">
-            <article class="tile">
-              <video
-                class="media-fill js-autoplay"
-                src="https://ecombos.ai/hv2-videos/aurelia-scenery.mp4"
-                poster="https://ecombos.ai/hv2-videos/aurelia-scenery.jpg"
-                muted
-                loop
-                playsinline
-                preload="none"
-                data-delay="500"
-              ></video>
+            <article class="tile" data-world="2">
+              <img
+                class="media-fill sku"
+                src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/2b7cf7ba6ce78e.png"
+                alt="AURELIA packshot 4:5"
+                width="1200"
+                height="1500"
+              />
               <div class="tile-scrim"></div>
+              <span class="tile-busy">RENDERING</span>
               <span class="tile-num">02</span>
-              <span class="tile-label">SCENERY · MEDITERRANEAN</span>
+              <span class="tile-label">PACKSHOT · 4:5</span>
             </article>
-            <article class="tile">
+            <article class="tile" data-world="3">
+              <img
+                class="media-fill"
+                src="https://ecombos.ai/assets/aurelia-04-architecture-DmknNOY9.jpg"
+                alt="AURELIA architectural still"
+                width="1024"
+                height="1024"
+              />
+              <div class="tile-scrim"></div>
+              <span class="tile-busy">RENDERING</span>
+              <span class="tile-num">03</span>
+              <span class="tile-label">ARCHITECTURE</span>
+            </article>
+            <article class="tile" data-world="4">
               <video
                 class="media-fill js-autoplay"
                 src="https://ecombos.ai/hv2-videos/aurelia-paris.mp4"
@@ -255,39 +276,24 @@
                 loop
                 playsinline
                 preload="none"
-                data-delay="1000"
               ></video>
               <div class="tile-scrim"></div>
-              <span class="tile-num">03</span>
+              <span class="tile-busy">RENDERING</span>
+              <span class="tile-num">04</span>
               <span class="tile-label">UGC · PARIS</span>
             </article>
-            <article class="tile">
+            <article class="tile" data-world="5">
               <img
                 class="media-fill"
-                src="https://ecombos.ai/assets/aurelia-04-architecture-DmknNOY9.jpg"
-                alt="Aurelia architectural still"
-                width="1024"
-                height="1024"
-                loading="lazy"
+                src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/91561e106e7b4b.png"
+                alt="AURELIA 4K clasp engraving"
+                width="1600"
+                height="900"
               />
               <div class="tile-scrim"></div>
-              <span class="tile-num">04</span>
-              <span class="tile-label">ARCHITECTURE</span>
-            </article>
-            <article class="tile">
-              <video
-                class="media-fill js-autoplay"
-                src="https://ecombos.ai/hv2-videos/aurelia-nyc.mp4"
-                poster="https://ecombos.ai/hv2-videos/aurelia-nyc.jpg"
-                muted
-                loop
-                playsinline
-                preload="none"
-                data-delay="1500"
-              ></video>
-              <div class="tile-scrim"></div>
+              <span class="tile-busy">RENDERING</span>
               <span class="tile-num">05</span>
-              <span class="tile-label">UGC · NYC</span>
+              <span class="tile-label">TYPE · 4K CLASP</span>
             </article>
           </div>
         </div>
@@ -295,9 +301,9 @@
 
       <section class="stats-bar" aria-label="Platform stats">
         <div class="wrap stats-row">
+          <p><span class="dot"></span> <strong>AURELIA-2703</strong> · live on this page</p>
           <p><span class="dot"></span> <strong>1.4M</strong> creatives rendered this month</p>
           <p><span class="dot"></span> v4 engine <em>6× faster</em> than v3</p>
-          <p><strong>82,400+</strong> stores worldwide</p>
           <p>22 languages · 49 ratios · 4K</p>
         </div>
       </section>
@@ -305,20 +311,20 @@
       <section class="marquee" aria-hidden="true">
         <div class="marquee-track">
           <div class="marquee-set">
-            <em>Frame by frame.</em>
-            <strong>Create cinematic ads in seconds.</strong>
-            <em>Cast your store.</em>
-            <em>Frame by frame.</em>
-            <strong>Create cinematic ads in seconds.</strong>
-            <em>Cast your store.</em>
+            <em>Drop a SKU.</em>
+            <strong>Five worlds.</strong>
+            <em>One campaign.</em>
+            <em>Drop a SKU.</em>
+            <strong>Five worlds.</strong>
+            <em>One campaign.</em>
           </div>
           <div class="marquee-set">
-            <em>Frame by frame.</em>
-            <strong>Create cinematic ads in seconds.</strong>
-            <em>Cast your store.</em>
-            <em>Frame by frame.</em>
-            <strong>Create cinematic ads in seconds.</strong>
-            <em>Cast your store.</em>
+            <em>Drop a SKU.</em>
+            <strong>Five worlds.</strong>
+            <em>One campaign.</em>
+            <em>Drop a SKU.</em>
+            <strong>Five worlds.</strong>
+            <em>One campaign.</em>
           </div>
         </div>
       </section>
@@ -326,10 +332,10 @@
       <section class="wrap spaces-sec" id="spaces" aria-labelledby="spaces-title">
         <div class="spaces-card">
           <div class="spaces-copy">
-            <p class="sec-kicker">— NEW IN ECOMBOS</p>
-            <h2 id="spaces-title">YOUR BRAND,<br /><em>WIRED TOGETHER.</em></h2>
+            <p class="sec-kicker">— LIVE JOB · AURELIA-2703</p>
+            <h2 id="spaces-title">ONE SKU,<br /><em>FIVE WORLDS.</em></h2>
             <p class="lede">
-              Spaces is the visual command center for your store. Drop in a product, connect it to ad shots, UGC reels, and hooks, then hand the whole graph off to your team — no folders, no handoff chaos.
+              Spaces is the visual command center for AURELIA-2703. Packshot, Mediterranean film, and 4K clasp are already wired — drop a new SKU and the graph re-renders the same five worlds.
             </p>
             <a class="btn-volt btn-spaces" href="https://ecombos.ai/spaces">
               <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true">
@@ -359,8 +365,8 @@
             </svg>
 
             <div class="prompt-card">
-              <div>PROMPT · @MITO</div>
-              <p>Hero shot of the <strong>Apex Fuel</strong> bottle, then a 9:16 UGC reel hyping it post-workout.</p>
+              <div>PROMPT · AURELIA-2703</div>
+              <p>AURELIA SS26 gold collar, 4:5 packshot then 9:16 Mediterranean film then 4K clasp.</p>
             </div>
 
             <div class="ok-chip">
@@ -369,11 +375,12 @@
             </div>
 
             <div class="node-card node-image">
-              <div class="node-head"><span>▦ IMAGE GEN</span><span>3:4</span></div>
+              <div class="node-head"><span>▦ PACKSHOT</span><span>4:5</span></div>
               <div class="node-media">
                 <img
-                  src="https://ecombos.ai/assets/auth-protein-ad-D8oZziA1.jpg"
-                  alt="Apex Fuel protein shake hero generated in Spaces"
+                  class="sku"
+                  src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/2b7cf7ba6ce78e.png"
+                  alt="AURELIA packshot in Spaces"
                   width="768"
                   height="1024"
                   loading="lazy"
@@ -383,32 +390,40 @@
               </div>
             </div>
 
-            <div class="creators-chip"><span class="dot"></span>Ecombos Creators</div>
+            <div class="creators-chip"><span class="dot"></span>AURELIA · SS26</div>
 
             <div class="node-card node-video">
-              <div class="node-head"><span>▶ UGC VIDEO</span><span>9:16 · 6s</span></div>
+              <div class="node-head"><span>▶ FILM</span><span>9:16</span></div>
               <div class="node-media">
-                <video
-                  class="js-autoplay"
-                  src="https://ecombos.ai/__l5e/assets-v1/34a70c19-8f0d-484e-a5f2-20114aa38e12/hv2-spaces-ugc.mp4"
-                  muted
-                  loop
-                  playsinline
-                  preload="none"
-                  data-delay="600"
-                ></video>
+                <img
+                  src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/4832f1bcac19e0.jpg"
+                  alt="AURELIA Mediterranean film still"
+                  loading="lazy"
+                />
                 <i class="port left"></i>
-                <p class="ugc-tag">@maya.fit · “obsessed 💪”</p>
+                <p class="ugc-tag">AURELIA · SS26 · 9:16</p>
+              </div>
+            </div>
+
+            <div class="node-card node-type">
+              <div class="node-head"><span>■ TYPE</span><span>4K</span></div>
+              <div class="node-media">
+                <img
+                  src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/91561e106e7b4b.png"
+                  alt="AURELIA 4K clasp"
+                  loading="lazy"
+                />
+                <i class="port left"></i>
               </div>
             </div>
 
             <div class="chat-chip chat-garret">
               <span>GARRET</span>
-              <div>wow this is perfect ✨</div>
+              <div>hold the gold — not brass</div>
             </div>
             <div class="chat-chip chat-gloria">
               <span>GLORIA</span>
-              <div>That's cool! 🔥</div>
+              <div>AURELIA reads at 4K</div>
             </div>
           </div>
         </div>
@@ -417,8 +432,8 @@
       <section class="wrap templates-sec" aria-labelledby="templates-title">
         <div class="section-head">
           <div>
-            <p class="sec-kicker">— STUDIO TEMPLATES</p>
-            <h2 id="templates-title">Pick a stage. <em>Press play.</em></h2>
+            <p class="sec-kicker">— AURELIA WORLDS</p>
+            <h2 id="templates-title">Four worlds. <em>One necklace.</em></h2>
           </div>
           <div class="round-nav" aria-hidden="true">
             <button type="button" class="round-btn" data-carousel="prev" aria-label="Previous templates">‹</button>
@@ -427,175 +442,102 @@
         </div>
         <div class="template-grid" id="template-grid">
           <article class="template-card">
-            <img src="https://ecombos.ai/assets/hv2-tile-01-lumera-QePEEsrQ.jpg" alt="Luxury skincare glacier still" width="1536" height="1024" loading="lazy" />
+            <img src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/4832f1bcac19e0.jpg" alt="AURELIA Mediterranean film" width="1536" height="1024" loading="lazy" />
             <div class="template-copy">
-              <p>LUXURY SKINCARE</p>
-              <h3>PRODUCT POSTER</h3>
+              <p>AURELIA · FILM</p>
+              <h3>MEDITERRANEAN</h3>
             </div>
           </article>
           <article class="template-card">
-            <video
-              class="js-autoplay"
-              src="https://ecombos.ai/__l5e/assets-v1/eed628d5-5d95-4552-8f83-ba6ac682a7ef/hv2-tile-02-noir.mp4"
-              muted
-              loop
-              playsinline
-              preload="none"
-              data-delay="400"
-            ></video>
+            <img src="https://ecombos.ai/assets/aurelia-04-architecture-DmknNOY9.jpg" alt="AURELIA architecture still" width="1536" height="1024" loading="lazy" />
             <div class="template-copy">
-              <p>FRAGRANCE</p>
-              <h3>VIDEO STUDIO</h3>
+              <p>AURELIA · STILL</p>
+              <h3>ARCHITECTURE</h3>
             </div>
           </article>
           <article class="template-card">
-            <img src="https://ecombos.ai/assets/hv2-tile-03-verdant-CsNZbCAm.jpg" alt="Botanical serum jungle atelier" width="1536" height="1024" loading="lazy" />
+            <img src="https://ecombos.ai/hv2-videos/aurelia-paris.jpg" alt="AURELIA UGC Paris" width="1536" height="1024" loading="lazy" />
             <div class="template-copy">
-              <p>BOTANICAL SERUM</p>
-              <h3>PRODUCT POSTER</h3>
+              <p>AURELIA · UGC</p>
+              <h3>PARIS</h3>
             </div>
           </article>
           <article class="template-card">
-            <video
-              class="js-autoplay"
-              src="https://ecombos.ai/__l5e/assets-v1/ebd74c32-2706-4da0-93f4-e192e55c2c84/hv2-tile-04-apex.mp4"
-              muted
-              loop
-              playsinline
-              preload="none"
-              data-delay="800"
-            ></video>
+            <img src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/91561e106e7b4b.png" alt="AURELIA 4K clasp" width="1536" height="1024" loading="lazy" />
             <div class="template-copy">
-              <p>PERFORMANCE</p>
-              <h3>VIDEO STUDIO</h3>
+              <p>AURELIA · TYPE</p>
+              <h3>4K CLASP</h3>
             </div>
           </article>
         </div>
       </section>
 
       <section class="wrap feed-sec" aria-labelledby="feed-title">
-        <p class="mono-kicker">06 / SHIP — SOCIAL</p>
-        <h2 id="feed-title">Built for the <em>feed.</em></h2>
+        <p class="mono-kicker">06 / SHIP — AURELIA-2703</p>
+        <h2 id="feed-title">Ship the campaign <em>in 9:16.</em></h2>
         <p class="lede feed-lede">
-          Every render exports natively to Instagram Reels, TikTok, YouTube Shorts, and Meta Ads Manager — hooks, captions, and audio pre-baked.
+          Same necklace, four frames. Packshot, Mediterranean film, architecture, 4K clasp — native 9:16 for Reels, TikTok, and Shorts.
         </p>
 
         <div class="phones">
-          <figure class="phone tiktok">
-            <video
-              class="js-autoplay"
-              src="https://ecombos.ai/__l5e/assets-v1/e1ef1e0e-9272-4c80-9b9d-63b895e6a924/hv2-reel-01-yuna.mp4"
-              muted
-              loop
-              playsinline
-              preload="none"
-            ></video>
+          <figure class="phone job">
+            <img src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/2b7cf7ba6ce78e.png" alt="AURELIA packshot in 9:16" />
             <div class="phone-ui">
-              <div class="status"><span>9:41</span><span>5G ■</span></div>
+              <div class="status"><span>9:41</span><span>4K</span></div>
               <div class="island"></div>
-              <div class="tabs"><span>Following</span><span class="on">For You</span></div>
-              <div class="rail">
-                <div class="avatar-plus"></div>
-                <div>♥<small>248.1K</small></div>
-                <div>💬<small>1,842</small></div>
-                <div>🔖<small>9,201</small></div>
-                <div>↪<small>12.4K</small></div>
-              </div>
               <div class="caption">
-                <strong>@yuna.glow</strong>
-                <p>POV: 3 days in and the glow is unreal ✨ #skincare</p>
+                <strong>AURELIA · SS26</strong>
+                <p>PACKSHOT · 9:16 · 4:5 crop</p>
               </div>
             </div>
-            <figcaption>ECOMBOS REEL · 01 <span>TIKTOK · 9:16</span></figcaption>
+            <figcaption>WORLD 02 <span>PACKSHOT · 9:16</span></figcaption>
           </figure>
 
-          <figure class="phone reels">
-            <video
-              class="js-autoplay"
-              src="https://ecombos.ai/__l5e/assets-v1/16483b39-a341-46e0-a284-807bc7ca96ee/hv2-reel-02-marcus.mp4"
-              muted
-              loop
-              playsinline
-              preload="none"
-              data-delay="300"
-            ></video>
+          <figure class="phone job">
+            <img src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/4832f1bcac19e0.jpg" alt="AURELIA film in 9:16" />
             <div class="phone-ui">
-              <div class="status"><span>9:41</span><span>5G ■</span></div>
+              <div class="status"><span>9:41</span><span>4K</span></div>
               <div class="island"></div>
-              <div class="reels-top"><em>Reels</em></div>
-              <div class="rail">
-                <div>♡<small>84,219</small></div>
-                <div>💬<small>612</small></div>
-                <div>➤</div>
-              </div>
               <div class="caption">
-                <strong>marcus.scent</strong>
-                <p>if she doesn't ask what you're wearing, return it 🔥</p>
+                <strong>AURELIA · SS26</strong>
+                <p>FILM · 9:16 · MEDITERRANEAN</p>
               </div>
             </div>
-            <figcaption>ECOMBOS REEL · 02 <span>REELS · 9:16</span></figcaption>
+            <figcaption>WORLD 01 <span>FILM · 9:16</span></figcaption>
           </figure>
 
-          <figure class="phone tiktok">
-            <video
-              class="js-autoplay"
-              src="https://ecombos.ai/__l5e/assets-v1/fdecba86-3f2a-48c9-ab41-23afa40651dc/hv2-reel-03-sofia.mp4"
-              muted
-              loop
-              playsinline
-              preload="none"
-              data-delay="600"
-            ></video>
+          <figure class="phone job">
+            <img src="https://ecombos.ai/assets/aurelia-04-architecture-DmknNOY9.jpg" alt="AURELIA architecture in 9:16" />
             <div class="phone-ui">
-              <div class="status"><span>9:41</span><span>5G ■</span></div>
+              <div class="status"><span>9:41</span><span>4K</span></div>
               <div class="island"></div>
-              <div class="tabs"><span>Following</span><span class="on">For You</span></div>
-              <div class="rail">
-                <div class="avatar-plus"></div>
-                <div>♥<small>1.2M</small></div>
-                <div>💬<small>8,431</small></div>
-              </div>
               <div class="caption">
-                <strong>@sofia.skin</strong>
-                <p>my skin has NEVER looked like this 🥹 #serum</p>
+                <strong>AURELIA · SS26</strong>
+                <p>ARCHITECTURE · 9:16</p>
               </div>
             </div>
-            <figcaption>ECOMBOS REEL · 03 <span>TIKTOK · 9:16</span></figcaption>
+            <figcaption>WORLD 03 <span>ARCH · 9:16</span></figcaption>
           </figure>
 
-          <figure class="phone reels">
-            <video
-              class="js-autoplay"
-              src="https://ecombos.ai/__l5e/assets-v1/5971b9c5-17cd-4831-986d-e5a7b7af6bc6/hv2-reel-04-jake.mp4"
-              muted
-              loop
-              playsinline
-              preload="none"
-              data-delay="900"
-            ></video>
+          <figure class="phone job">
+            <img src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/91561e106e7b4b.png" alt="AURELIA clasp in 9:16" />
             <div class="phone-ui">
-              <div class="status"><span>9:41</span><span>5G ■</span></div>
+              <div class="status"><span>9:41</span><span>4K</span></div>
               <div class="island"></div>
-              <div class="reels-top"><em>Reels</em></div>
-              <div class="rail">
-                <div>♡<small>162,884</small></div>
-                <div>💬<small>2,104</small></div>
-                <div>➤</div>
-              </div>
               <div class="caption">
-                <strong>jake.lifts</strong>
-                <p>3 weeks. clean ingredients. real results. 💪 #apexfuel</p>
+                <strong>AURELIA · SS26</strong>
+                <p>TYPE · 9:16 · 4K CLASP</p>
               </div>
             </div>
-            <figcaption>ECOMBOS REEL · 04 <span>REELS · 9:16</span></figcaption>
+            <figcaption>WORLD 05 <span>CLASP · 9:16</span></figcaption>
           </figure>
         </div>
 
         <div class="format-bar">
           <div class="format-copy">
-            <div>One render.</div>
-            <div class="volt-italic">Every platform.</div>
-            <p>Push, schedule, repurpose. Same file, every channel.</p>
+            <div>One necklace.</div>
+            <div class="volt-italic">Every ratio.</div>
+            <p>Packshot, film, architecture, clasp. Same file, every channel.</p>
           </div>
           <div class="format-item"><b>9:16</b><span>REELS</span></div>
           <div class="format-item"><b>1:1</b><span>GRID</span></div>
@@ -608,9 +550,9 @@
       <section class="wrap gpt-sec" aria-labelledby="gpt-title">
         <div class="gpt-card">
           <div class="gpt-left">
-            <p class="gpt-kicker">NEW MODEL</p>
-            <h2 id="gpt-title">Meet GPT Image 2</h2>
-            <p>4K images with near-perfect text rendering.</p>
+            <p class="gpt-kicker">GPT IMAGE 2 · AURELIA-2703</p>
+            <h2 id="gpt-title">4K type that reads.</h2>
+            <p>Packshot, engraving, on-body — AURELIA survives the crop.</p>
             <a class="btn-white" href="https://ecombos.ai/gpt-image-2">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
                 <path d="M12 2l1.8 5.5L19 9.3l-5.2 1.8L12 17l-1.8-5.9L5 9.3l5.2-1.8L12 2zm7 13l.9 2.8L23 18l-3.1.9L19 22l-.9-3.1L15 18l3.1-.9L19 15zM5 14l.7 2.1L8 17l-2.3.7L5 20l-.7-2.3L2 17l2.3-.9L5 14z" />
@@ -626,23 +568,19 @@
               loading="lazy"
             />
           </div>
-          <div class="poster-grid">
-            <div class="poster-col">
-              <img src="https://ecombos.ai/assets/poster-boom-DohQXETv.jpg" alt="Future State editorial" loading="lazy" />
-              <img src="https://ecombos.ai/assets/poster-cows-DnRo55lk.jpg" alt="Cows in pasture" loading="lazy" />
-            </div>
-            <div class="poster-col">
-              <img src="https://ecombos.ai/assets/poster-game-DkVa4HGS.jpg" alt="Quest Runner game UI" loading="lazy" />
-              <img src="https://ecombos.ai/assets/poster-akai-Cydvg18F.jpg" alt="Tokyo Nights poster" loading="lazy" />
-            </div>
-            <div class="poster-col">
-              <img src="https://ecombos.ai/assets/poster-marco-DpbDoD9r.jpg" alt="Night Echo concert poster" loading="lazy" />
-              <img src="https://ecombos.ai/assets/poster-octopus-CTtl7Hf8.jpg" alt="Surreal portrait" loading="lazy" />
-            </div>
-            <div class="poster-col">
-              <img src="https://ecombos.ai/assets/poster-ceramics-CWDTBgM4.jpg" alt="Ceramics still life" loading="lazy" />
-              <img src="https://ecombos.ai/assets/poster-sit-Dms4KWYm.jpg" alt="Stillness Daily book" loading="lazy" />
-            </div>
+          <div class="poster-grid aurelia-proofs">
+            <figure>
+              <img src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/2b7cf7ba6ce78e.png" alt="AURELIA packshot" loading="lazy" />
+              <figcaption>PACKSHOT</figcaption>
+            </figure>
+            <figure>
+              <img src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/91561e106e7b4b.png" alt="AURELIA 4K engraving" loading="lazy" />
+              <figcaption>ENGRAVING</figcaption>
+            </figure>
+            <figure>
+              <img src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/4832f1bcac19e0.jpg" alt="AURELIA on-body film still" loading="lazy" />
+              <figcaption>ON-BODY</figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -666,7 +604,7 @@
             </div>
             <div class="mod-visual">
               <div class="score-card">
-                <div class="score-kicker">VIRALITY SCORE</div>
+                <div class="score-kicker">AURELIA-2703 · FILM 01</div>
                 <div class="score-num">8.<span>4</span><small>/10</small></div>
                 <div class="score-bar"><i></i></div>
                 <div class="score-row"><span>HOOK</span><span>STRONG</span></div>
@@ -675,7 +613,7 @@
             </div>
             <div class="mod-foot">
               <h3><i></i> VIRALITY PREDICTOR</h3>
-              <p>Score every creative before you spend a dollar — hook, hold rate, retention.</p>
+              <p>Score AURELIA-2703 film 01 before you spend a dollar — hook, hold rate, retention.</p>
             </div>
           </a>
 
@@ -698,7 +636,7 @@
           <a class="module live hook" href="https://ecombos.ai/marketing-studio">
             <img
               class="hook-bg"
-              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80"
+              src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/4832f1bcac19e0.jpg"
               alt=""
             />
             <div class="mod-chips">

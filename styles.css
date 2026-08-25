@@ -497,6 +497,7 @@ ul {
 .film {
   min-height: 340px;
   aspect-ratio: 4 / 5;
+  cursor: copy;
 }
 
 .media-fill {
@@ -531,11 +532,40 @@ ul {
   padding: 6px 10px;
   border-radius: 6px;
   background: rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #fff;
+  border: 1px solid var(--volt);
+  color: var(--volt);
   font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.08em;
+}
+
+.job-progress {
+  position: absolute;
+  top: 46px;
+  left: 12px;
+  z-index: 3;
+  width: min(220px, 46%);
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.18em;
+  color: var(--volt);
+}
+
+.job-progress i {
+  display: block;
+  margin-top: 6px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.16);
+  overflow: hidden;
+}
+
+.job-progress b {
+  display: block;
+  width: 0%;
+  height: 100%;
+  background: var(--volt);
+  box-shadow: 0 0 10px var(--volt);
+  transition: width 0.35s ease;
 }
 
 .rec-label {
@@ -685,11 +715,11 @@ ul {
 
 .packshot {
   position: absolute;
-  right: 18px;
-  bottom: 28%;
+  right: 16px;
+  top: 48px;
   z-index: 4;
-  width: min(22%, 140px);
-  aspect-ratio: 3 / 4;
+  width: min(22%, 128px);
+  aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: 12px;
   border: 1.5px solid var(--volt);
@@ -711,6 +741,48 @@ ul {
 .tile {
   aspect-ratio: 1;
   background: #171717;
+}
+
+.tile .media-fill {
+  opacity: 0;
+  transform: scale(1.08);
+  filter: saturate(0.15) brightness(0.4);
+  transition: opacity 0.5s ease, transform 0.6s ease, filter 0.5s ease;
+}
+
+.tile.is-ready .media-fill {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+.tile-busy {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--volt);
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    -12deg,
+    rgba(234, 255, 0, 0.04),
+    rgba(234, 255, 0, 0.04) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+
+.tile.is-ready .tile-busy {
+  display: none;
+}
+
+.tile.is-ready .tile-num {
+  box-shadow: 0 0 16px rgba(234, 255, 0, 0.55);
 }
 
 .tile-scrim {
@@ -1008,6 +1080,12 @@ ul {
   top: 10%;
 }
 
+.node-type {
+  left: 8%;
+  top: 48%;
+  width: 22%;
+}
+
 .node-head {
   display: flex;
   justify-content: space-between;
@@ -1270,7 +1348,8 @@ ul {
   position: relative;
 }
 
-.phone video {
+.phone video,
+.phone img {
   width: 100%;
   aspect-ratio: 9 / 19;
   object-fit: cover;
@@ -1553,11 +1632,39 @@ ul {
 }
 
 .chrome-mark {
-  width: min(100%, 340px);
-  margin-top: 24px;
-  transform: translateY(16px);
+  width: min(42%, 160px);
+  margin-top: 16px;
+  transform: translateY(8px);
   pointer-events: none;
   user-select: none;
+}
+
+.poster-grid.aurelia-proofs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  padding: 12px;
+  align-content: center;
+}
+
+.aurelia-proofs figure {
+  margin: 0;
+}
+
+.aurelia-proofs img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.aurelia-proofs figcaption {
+  margin-top: 8px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .poster-grid {
@@ -2072,8 +2179,9 @@ ul {
     grid-column: auto;
   }
 
-  .poster-grid {
-    grid-template-columns: repeat(4, 1fr);
+  .poster-grid,
+  .poster-grid.aurelia-proofs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .module-grid {
