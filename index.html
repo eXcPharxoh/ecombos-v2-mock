@@ -2,436 +2,703 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#0E1116" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0A0A0A" />
     <meta name="robots" content="noindex" />
-    <title>EcomBos Studio — AURELIA-2703 (mock)</title>
+    <title>EcomBos — AURELIA-2703 · Drop one product. Get the whole campaign.</title>
     <meta
       name="description"
-      content="Design mock: one product photo becomes a full AURELIA campaign — packshot, angles, fashion film, 4K type. Not live ecombos.ai."
+      content="Live job AURELIA-2703 on EcomBos: drop one product photo and get the packshot, Mediterranean film, architecture still, and 4K clasp — one necklace, five worlds."
     />
     <link rel="canonical" href="https://ecombos.ai/" />
-    <link rel="icon" href="https://ecombos.ai/eb-logo.png" />
+    <link rel="icon" type="image/png" href="https://ecombos.ai/eb-logo.png" />
+    <link rel="apple-touch-icon" href="https://ecombos.ai/eb-logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://uemglyheqrjfpanjsjkh.supabase.co" crossorigin />
     <link rel="preconnect" href="https://ecombos.ai" />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link
-      rel="preload"
-      as="image"
-      href="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/2b7cf7ba6ce78e.png"
-      fetchpriority="high"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,900;1,9..40,400;1,9..40,700;1,9..40,900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <span class="mock-badge" aria-hidden="true">MOCK</span>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-head">
-      <p class="mock-bar">MOCK · not live ecombos.ai · AURELIA-2703</p>
-      <nav class="nav" aria-label="Primary">
-        <a class="brand" href="#main">
-          <img class="brand-mark" src="https://ecombos.ai/eb-logo.png" width="28" height="28" alt="" />
-          <span class="brand-name">EcomBos</span>
-        </a>
-        <ul class="nav-links">
-          <li><a href="#studio">Studio</a></li>
-          <li><a href="#spaces">Spaces</a></li>
-          <li><a href="https://ecombos.ai/pricing">Pricing</a></li>
-        </ul>
-        <div class="nav-end">
-          <a class="chip" href="#mcp"><span class="chip-dot" aria-hidden="true"></span>MCP LIVE</a>
-          <a class="text-link" href="https://ecombos.ai/ai-studio">Log in</a>
-          <button class="btn btn-volt" type="button" data-open-file>Drop a photo</button>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="header-left">
+          <a class="brand" href="https://ecombos.ai/" aria-label="EcomBos home">
+            <img src="https://ecombos.ai/eb-logo-white.png" width="44" height="44" alt="EB" />
+          </a>
+          <span class="header-rule" aria-hidden="true">|</span>
+          <nav class="primary-nav" aria-label="Primary">
+            <a class="nav-link" href="https://ecombos.ai/">
+              <svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7" rx="1" />
+                <rect x="14" y="3" width="7" height="7" rx="1" />
+                <rect x="3" y="14" width="7" height="7" rx="1" />
+                <rect x="14" y="14" width="7" height="7" rx="1" />
+              </svg>
+              Explore
+            </a>
+
+            <div class="nav-drop">
+              <button class="nav-link" type="button" aria-expanded="false">
+                Agents
+                <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              <div class="drop-panel">
+                <p class="drop-kicker">Agents</p>
+                <a href="https://ecombos.ai/agents/brand-identity">Brand Identity</a>
+                <a href="https://ecombos.ai/agents/niche-validator">Niche Validator</a>
+                <a href="https://ecombos.ai/agents/meta-ads">Meta Ads Copy</a>
+                <a href="https://ecombos.ai/agents/tiktok-ads">TikTok Ads <span class="pill-new-mini">NEW</span></a>
+                <a href="https://ecombos.ai/agents/content-calendar">Content Calendar</a>
+              </div>
+            </div>
+
+            <div class="nav-drop">
+              <button class="nav-link" type="button" aria-expanded="false">
+                Product Content
+                <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              <div class="drop-panel">
+                <p class="drop-kicker">Product Content</p>
+                <a href="https://ecombos.ai/creative-studio/product-poster">Product Photo Poster <span class="pill-new-mini">NEW</span></a>
+                <a href="https://ecombos.ai/creative-studio/product-showcase">Product Studio <span class="pill-hot-mini">HOT</span></a>
+                <a href="https://ecombos.ai/creative-studio/upscale">Image Upscale</a>
+                <a href="https://ecombos.ai/creative-studio/logo-generator">Logo Generator</a>
+                <a href="https://ecombos.ai/creative-studio/angle-factory">Angle Factory <span class="pill-new-mini">NEW</span></a>
+              </div>
+            </div>
+
+            <div class="nav-drop">
+              <button class="nav-link" type="button" aria-expanded="false">
+                Advertising
+                <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              <div class="drop-panel">
+                <p class="drop-kicker">Advertising</p>
+                <a href="https://ecombos.ai/marketing-studio">Marketing Studio <span class="pill-new-mini">NEW</span></a>
+                <a href="https://ecombos.ai/ad-decoder">Ad Decoder <span class="pill-new-mini">NEW</span></a>
+                <a href="https://ecombos.ai/product-reveal">Product Reveal <span class="pill-new-mini">NEW</span></a>
+                <a href="https://ecombos.ai/creative-studio/video-transformer">Character Transform</a>
+              </div>
+            </div>
+
+            <a class="nav-link" href="https://ecombos.ai/ai-studio">AI Studio</a>
+            <a class="nav-link nav-mcp" href="https://ecombos.ai/mcp">
+              MCP
+              <span class="tag-live">Live</span>
+            </a>
+            <a class="nav-link nav-banana" href="https://ecombos.ai/nano-banana" aria-label="Nano Banana">
+              <span class="banana-mark">
+                <img src="https://ecombos.ai/assets/nano-banana-logo-MtWvlHUK.png" width="20" height="20" alt="" />
+              </span>
+            </a>
+            <a class="nav-link" href="https://ecombos.ai/gpt-image-2">GPT Image 2</a>
+            <a class="nav-link nav-spaces" href="https://ecombos.ai/spaces">
+              Spaces
+              <span class="tag-new">New</span>
+            </a>
+            <a class="nav-link" href="https://ecombos.ai/community">Community</a>
+          </nav>
         </div>
-      </nav>
+
+        <div class="header-right">
+          <a class="nav-text" href="https://ecombos.ai/pricing">Pricing</a>
+          <a class="nav-text" href="https://ecombos.ai/auth">Log in</a>
+          <a class="btn-volt btn-signup" href="https://ecombos.ai/auth">Sign up</a>
+          <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
     </header>
 
-    <main id="main">
-      <section class="hero" id="studio" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Featured job · AURELIA-2703</p>
-          <h1 id="hero-title">
-            <span>One photo.</span>
-            <span>A full campaign.</span>
-          </h1>
-          <p class="lede">
-            Drop a SKU. EcomBos builds the packshot, the angle set, the fashion film, and the 4K clasp
-            — one necklace, five figures, no studio day.
-          </p>
-          <div class="hero-actions">
-            <button class="btn btn-volt btn-lg" type="button" data-open-file>Drop a product photo</button>
-            <button class="btn btn-ghost" type="button" data-run-aurelia>Watch AURELIA run</button>
-          </div>
-          <dl class="stats">
-            <div>
-              <dt>1.4M</dt>
-              <dd>creatives this month</dd>
-            </div>
-            <div>
-              <dt>82,400+</dt>
-              <dd>stores worldwide</dd>
-            </div>
-            <div>
-              <dt>v4 6×</dt>
-              <dd>faster than v3</dd>
-            </div>
-            <div>
-              <dt>4K</dt>
-              <dd>type that reads</dd>
-            </div>
-          </dl>
-        </div>
+    <div class="mobile-drawer" hidden>
+      <a href="https://ecombos.ai/auth" class="btn-volt">Sign up — Get started free</a>
+      <a href="https://ecombos.ai/auth">Log in</a>
+      <a href="https://ecombos.ai/pricing">Pricing</a>
+      <a href="https://ecombos.ai/">Explore</a>
+      <a href="https://ecombos.ai/ai-studio">AI Studio</a>
+      <a href="https://ecombos.ai/mcp">MCP</a>
+      <a href="https://ecombos.ai/gpt-image-2">GPT Image 2</a>
+      <a href="https://ecombos.ai/spaces">Spaces</a>
+      <a href="https://ecombos.ai/community">Community</a>
+    </div>
 
-        <aside
-          class="stage"
-          id="stage"
-          data-fig="0.1"
-          tabindex="0"
-          role="button"
-          aria-label="AURELIA stage. Click or press Enter to run the campaign. Drop an image to replace the packshot."
-        >
-          <div class="stage-frame">
-            <canvas id="knot" class="stage-knot" aria-hidden="true"></canvas>
-            <div class="stage-poster" id="poster">
+    <div class="ticker">
+      <div class="ticker-inner">
+        <div class="ticker-left">
+          <span class="tick">
+            <span class="dot pulse"></span>
+            <strong>V4 ENGINE LIVE</strong>
+            <span class="dim">— 6× faster renders</span>
+          </span>
+          <a class="tick hide-md" href="https://ecombos.ai/spaces">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="var(--volt)" stroke-width="2" aria-hidden="true">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+            </svg>
+            New: <strong>Spaces</strong>
+          </a>
+          <span class="tick hide-lg">
+            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="var(--volt)" stroke-width="2" aria-hidden="true">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+            </svg>
+            AURELIA-2703 · live on this page
+          </span>
+        </div>
+        <span class="tick">
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20" />
+          </svg>
+          82,400+ stores worldwide
+        </span>
+      </div>
+    </div>
+
+    <main id="main">
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-grid">
+          <article class="film" id="featured-film">
+            <video
+              id="hero-reel"
+              class="media-fill js-autoplay"
+              src="https://ecombos.ai/hv2-videos/aurelia-hero.mp4"
+              poster="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/4832f1bcac19e0.jpg"
+              muted
+              loop
+              playsinline
+              autoplay
+              preload="metadata"
+            ></video>
+            <div class="film-scrim"></div>
+            <div class="film-top">
+              <span class="hud-pill">● LIVE JOB · AURELIA-2703</span>
+              <span class="rec-label"><span class="dot pulse"></span>REC · 4K</span>
+            </div>
+            <div class="job-progress" aria-hidden="true">
+              <span id="job-status">RENDERING WORLDS</span>
+              <i><b id="job-bar"></b></i>
+            </div>
+            <div class="film-body">
+              <div class="film-copy">
+                <p class="eyebrow">
+                  <span class="dot pulse"></span>
+                  ECOMBOS — CREATIVE STUDIO FOR ECOMMERCE
+                </p>
+                <h1 id="hero-title">
+                  Drop one product.<br />
+                  <em>Get the whole campaign.</em>
+                </h1>
+                <div class="hero-ctas">
+                  <button class="btn-volt btn-cta" type="button" data-open-file>
+                    Drop a product photo
+                    <span class="cta-arrow" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="var(--volt)" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14" />
+                      </svg>
+                    </span>
+                  </button>
+                  <button class="btn-ghost" type="button" data-run-job>
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="var(--volt)" stroke-width="2" aria-hidden="true">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                    Watch AURELIA run
+                  </button>
+                </div>
+              </div>
+              <aside class="film-hud" aria-hidden="true">
+                <p>AURELIA-2703<br /><span id="film-index">FILM 01 / 05</span><br />SEEDANCE 2.0</p>
+                <div class="worlds-chip">
+                  <div>● 5 WORLDS</div>
+                  <div>ONE NECKLACE · ONE PROMPT</div>
+                </div>
+                <p class="timecode" id="timecode">00:00 · 4K · 60FPS</p>
+              </aside>
+              <p class="film-hud-mobile">
+                <span>AURELIA-2703 · LIVE JOB</span>
+                <span id="timecode-mobile">00:00 · 4K</span>
+              </p>
+            </div>
+            <img
+              class="packshot"
+              id="packshot"
+              src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/2b7cf7ba6ce78e.png"
+              alt="AURELIA gold collar packshot"
+            />
+            <input id="packshot-file" class="sr-only" type="file" accept="image/*" />
+          </article>
+
+          <div class="hero-tiles">
+            <article class="tile" data-world="2">
               <img
-                id="lcp"
-                class="layer is-on"
+                class="media-fill sku"
                 src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/2b7cf7ba6ce78e.png"
-                alt="AURELIA yellow-gold collar necklace on a dark pedestal, clasp engraved AURELIA"
+                alt="AURELIA packshot 4:5"
                 width="1200"
                 height="1500"
-                fetchpriority="high"
-                decoding="async"
               />
-              <div class="layer layer-grid" id="grid" aria-hidden="true">
-                <figure>
-                  <img class="sku" src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/2b7cf7ba6ce78e.png" alt="" />
-                  <figcaption>00 HERO</figcaption>
-                </figure>
-                <figure>
-                  <img class="sku" src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/2b7cf7ba6ce78e.png" alt="" />
-                  <figcaption>01 3/4 L</figcaption>
-                </figure>
-                <figure>
-                  <img class="sku" src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/2b7cf7ba6ce78e.png" alt="" />
-                  <figcaption>02 3/4 R</figcaption>
-                </figure>
-                <figure>
-                  <img class="sku" src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/2b7cf7ba6ce78e.png" alt="" />
-                  <figcaption>03 TOP</figcaption>
-                </figure>
-                <figure>
-                  <img class="sku" src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/2b7cf7ba6ce78e.png" alt="" />
-                  <figcaption>04 MACRO</figcaption>
-                </figure>
-                <figure>
-                  <img class="sku" src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/2b7cf7ba6ce78e.png" alt="" />
-                  <figcaption>05 REVERSE</figcaption>
-                </figure>
-                <figure>
-                  <img class="sku" src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/2b7cf7ba6ce78e.png" alt="" />
-                  <figcaption>06 PROFILE</figcaption>
-                </figure>
-                <figure>
-                  <img class="sku" src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/2b7cf7ba6ce78e.png" alt="" />
-                  <figcaption>07 DETAIL</figcaption>
-                </figure>
-              </div>
+              <div class="tile-scrim"></div>
+              <span class="tile-busy">RENDERING</span>
+              <span class="tile-num">02</span>
+              <span class="tile-label">PACKSHOT · 4:5</span>
+            </article>
+            <article class="tile" data-world="3">
               <img
-                id="film"
-                class="layer"
-                src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/4832f1bcac19e0.jpg"
-                alt="Mediterranean film still: linen dress, AURELIA collar, golden hour sea"
-                width="1200"
-                height="1200"
+                class="media-fill"
+                src="https://ecombos.ai/assets/aurelia-04-architecture-DmknNOY9.jpg"
+                alt="AURELIA architectural still"
+                width="1024"
+                height="1024"
               />
+              <div class="tile-scrim"></div>
+              <span class="tile-busy">RENDERING</span>
+              <span class="tile-num">03</span>
+              <span class="tile-label">ARCHITECTURE</span>
+            </article>
+            <article class="tile" data-world="4">
               <video
-                id="reel"
-                class="layer"
-                src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/086118d644bfdc.mp4"
-                poster="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/2b7cf7ba6ce78e.png"
+                class="media-fill js-autoplay"
+                src="https://ecombos.ai/hv2-videos/aurelia-paris.mp4"
+                poster="https://ecombos.ai/hv2-videos/aurelia-paris.jpg"
                 muted
+                loop
                 playsinline
-                preload="metadata"
-                aria-label="Five-second AURELIA fashion film"
+                preload="none"
               ></video>
+              <div class="tile-scrim"></div>
+              <span class="tile-busy">RENDERING</span>
+              <span class="tile-num">04</span>
+              <span class="tile-label">UGC · PARIS</span>
+            </article>
+            <article class="tile" data-world="5">
               <img
-                id="type-still"
-                class="layer"
+                class="media-fill"
                 src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/91561e106e7b4b.png"
-                alt="Macro of the AURELIA engraved clasp in 4K"
+                alt="AURELIA 4K clasp engraving"
                 width="1600"
                 height="900"
               />
-              <p class="motion-badge" id="motion-badge" hidden>REC · 5S · 4K</p>
-            </div>
-            <div class="stage-chrome">
-              <p class="fig">
-                <span id="fig-index">FIG 0.1</span>
-                <span id="fig-name">PACKSHOT</span>
-              </p>
-              <ol class="fig-steps" id="fig-steps" aria-hidden="true">
-                <li class="is-on"></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ol>
-              <p class="fig-meta">STAGE · 4:5 · REC</p>
-            </div>
+              <div class="tile-scrim"></div>
+              <span class="tile-busy">RENDERING</span>
+              <span class="tile-num">05</span>
+              <span class="tile-label">TYPE · 4K CLASP</span>
+            </article>
           </div>
-          <p class="stage-hint">Click or drop a product photo · FIG 0.1–0.5</p>
-        </aside>
+        </div>
       </section>
 
-      <section class="spaces" id="spaces" aria-labelledby="spaces-title">
-        <div class="section-kicker">
-          <p class="eyebrow">Spaces</p>
-          <h2 id="spaces-title">The job, as a graph.</h2>
-          <p class="section-lead">
-            Four assets. Three operators. Handed across the board without a folder named “final_v7”.
-          </p>
+      <section class="stats-bar" aria-label="Platform stats">
+        <div class="wrap stats-row">
+          <p><span class="dot"></span> <strong>AURELIA-2703</strong> · live on this page</p>
+          <p><span class="dot"></span> <strong>1.4M</strong> creatives rendered this month</p>
+          <p><span class="dot"></span> v4 engine <em>6× faster</em> than v3</p>
+          <p>22 languages · 49 ratios · 4K</p>
         </div>
-        <div class="spaces-layout">
-          <div class="spaces-board">
-            <svg class="wires" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-              <path d="M25 28 H75 M25 28 V72 M75 28 V72 M25 72 H75" />
+      </section>
+
+      <section class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <div class="marquee-set">
+            <em>Drop a SKU.</em>
+            <strong>Five worlds.</strong>
+            <em>One campaign.</em>
+            <em>Drop a SKU.</em>
+            <strong>Five worlds.</strong>
+            <em>One campaign.</em>
+          </div>
+          <div class="marquee-set">
+            <em>Drop a SKU.</em>
+            <strong>Five worlds.</strong>
+            <em>One campaign.</em>
+            <em>Drop a SKU.</em>
+            <strong>Five worlds.</strong>
+            <em>One campaign.</em>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrap spaces-sec" id="spaces" aria-labelledby="spaces-title">
+        <div class="spaces-card">
+          <div class="spaces-copy">
+            <p class="sec-kicker">— LIVE JOB · AURELIA-2703</p>
+            <h2 id="spaces-title">ONE SKU,<br /><em>FIVE WORLDS.</em></h2>
+            <p class="lede">
+              Spaces is the visual command center for AURELIA-2703. Packshot, Mediterranean film, and 4K clasp are already wired — drop a new SKU and the graph re-renders the same five worlds.
+            </p>
+            <a class="btn-volt btn-spaces" href="https://ecombos.ai/spaces">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true">
+                <path d="M12 2l1.8 5.5L19 9.3l-5.2 1.8L12 17l-1.8-5.9L5 9.3l5.2-1.8L12 2zm7 13l.9 2.8L23 18l-3.1.9L19 22l-.9-3.1L15 18l3.1-.9L19 15zM5 14l.7 2.1L8 17l-2.3.7L5 20l-.7-2.3L2 17l2.3-.9L5 14z" />
+              </svg>
+              Try Spaces
+            </a>
+            <div class="spaces-meta">
+              <span><span class="dot"></span> REALTIME MULTIPLAYER</span>
+              <span><span class="dot"></span> NODE GRAPH</span>
+              <span><span class="dot"></span> 1-CLICK SHIP</span>
+            </div>
+          </div>
+
+          <div class="node-graph" aria-hidden="true">
+            <svg class="wires" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="wire" x1="0" x2="1" y1="0" y2="0">
+                  <stop offset="0%" stop-color="#EAFF00" stop-opacity="0.35" />
+                  <stop offset="50%" stop-color="#EAFF00" stop-opacity="1" />
+                  <stop offset="100%" stop-color="#EAFF00" stop-opacity="0.5" />
+                </linearGradient>
+              </defs>
+              <path class="dash" d="M 24 22 C 27 26, 27 31, 28 35" fill="none" stroke="url(#wire)" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+              <path class="dash" d="M 56 35 C 61 33, 65 37, 70 35" fill="none" stroke="#EAFF00" stroke-opacity="0.85" stroke-width="2" stroke-linecap="round" vector-effect="non-scaling-stroke" />
+              <path d="M 10 88 C 22 82, 32 78, 42 70" fill="none" stroke="#EAFF00" stroke-opacity="0.55" stroke-width="1.4" stroke-dasharray="3 5" stroke-linecap="round" vector-effect="non-scaling-stroke" />
             </svg>
-            <article class="node">
-              <img
-                src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/2b7cf7ba6ce78e.png"
-                alt=""
-                class="sku-thumb"
-              />
-              <div>
-                <p class="eyebrow">01 · SKU</p>
-                <h3>Packshot</h3>
-                <p>Collar on pedestal. Clasp plate readable. Maya.</p>
+
+            <div class="prompt-card">
+              <div>PROMPT · AURELIA-2703</div>
+              <p>AURELIA SS26 gold collar, 4:5 packshot then 9:16 Mediterranean film then 4K clasp.</p>
+            </div>
+
+            <div class="ok-chip">
+              <span>ok</span>
+              <b>Mito</b>
+            </div>
+
+            <div class="node-card node-image">
+              <div class="node-head"><span>▦ PACKSHOT</span><span>4:5</span></div>
+              <div class="node-media">
+                <img
+                  class="sku"
+                  src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/2b7cf7ba6ce78e.png"
+                  alt="AURELIA packshot in Spaces"
+                  width="768"
+                  height="1024"
+                  loading="lazy"
+                />
+                <i class="port left"></i>
+                <i class="port right"></i>
               </div>
-            </article>
-            <article class="node">
-              <img
-                src="https://ecombos.ai/assets/aurelia-04-architecture-DmknNOY9.jpg"
-                alt="AURELIA architectural still"
-              />
-              <div>
-                <p class="eyebrow">02 · WORLD</p>
-                <h3>Architecture</h3>
-                <p>Stone, void, gold as a line. Gloria.</p>
+            </div>
+
+            <div class="creators-chip"><span class="dot"></span>AURELIA · SS26</div>
+
+            <div class="node-card node-video">
+              <div class="node-head"><span>▶ FILM</span><span>9:16</span></div>
+              <div class="node-media">
+                <img
+                  src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/4832f1bcac19e0.jpg"
+                  alt="AURELIA Mediterranean film still"
+                  loading="lazy"
+                />
+                <i class="port left"></i>
+                <p class="ugc-tag">AURELIA · SS26 · 9:16</p>
               </div>
-            </article>
-            <article class="node">
-              <img
-                src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/4832f1bcac19e0.jpg"
-                alt=""
-              />
-              <div>
-                <p class="eyebrow">03 · FILM</p>
-                <h3>Mediterranean</h3>
-                <p>Linen, terrace, hold the hour. Garret.</p>
+            </div>
+
+            <div class="node-card node-type">
+              <div class="node-head"><span>■ TYPE</span><span>4K</span></div>
+              <div class="node-media">
+                <img
+                  src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/91561e106e7b4b.png"
+                  alt="AURELIA 4K clasp"
+                  loading="lazy"
+                />
+                <i class="port left"></i>
               </div>
-            </article>
-            <article class="node">
-              <img
-                src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/91561e106e7b4b.png"
-                alt=""
-              />
-              <div>
-                <p class="eyebrow">04 · TYPE</p>
-                <h3>4K clasp</h3>
-                <p>AURELIA, serif, tracking open. Maya / Gloria.</p>
-              </div>
-            </article>
+            </div>
+
+            <div class="chat-chip chat-garret">
+              <span>GARRET</span>
+              <div>hold the gold — not brass</div>
+            </div>
+            <div class="chat-chip chat-gloria">
+              <span>GLORIA</span>
+              <div>AURELIA reads at 4K</div>
+            </div>
           </div>
-          <aside class="ops" aria-label="Operator notes">
-            <p class="eyebrow">Operator notes</p>
-            <article>
-              <h3>Maya · studio</h3>
-              <p>
-                Clasp plate stays readable at 4K. Satin face, mirror bevel. No extra fire on the oval.
-                Pedestal matte — never compete with the gold.
-              </p>
-            </article>
-            <article>
-              <h3>Garret · film</h3>
-              <p>
-                Golden hour, linen, stone terrace. Hold the gold; do not grade it into brass. Sea is
-                atmosphere, not a postcard.
-              </p>
-            </article>
-            <article>
-              <h3>Gloria · type</h3>
-              <p>
-                AURELIA in serif, tracking open. If the letters fail to cut, the frame does not ship.
-                Architecture still is a rest beat, not a hero.
-              </p>
-            </article>
-          </aside>
         </div>
       </section>
 
-      <section class="feed" id="feed" aria-labelledby="feed-title">
-        <div class="section-kicker">
-          <p class="eyebrow">Feed</p>
-          <h2 id="feed-title">Four frames. 9:16.</h2>
-          <p class="section-lead">Shipped as a set, not a carousel of noise.</p>
+      <section class="wrap templates-sec" aria-labelledby="templates-title">
+        <div class="section-head">
+          <div>
+            <p class="sec-kicker">— AURELIA WORLDS</p>
+            <h2 id="templates-title">Four worlds. <em>One necklace.</em></h2>
+          </div>
+          <div class="round-nav" aria-hidden="true">
+            <button type="button" class="round-btn" data-carousel="prev" aria-label="Previous templates">‹</button>
+            <button type="button" class="round-btn" data-carousel="next" aria-label="Next templates">›</button>
+          </div>
         </div>
-        <ul class="feed-grid">
-          <li>
-            <figure class="feed-card">
-              <img
-                src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/2b7cf7ba6ce78e.png"
-                alt="Packshot crop in 9:16"
-              />
-              <figcaption>
-                <span>01 · PACKSHOT</span>
-                <span>9:16 · 4K</span>
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure class="feed-card">
-              <img
-                src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/4832f1bcac19e0.jpg"
-                alt="Mediterranean on-body still in 9:16"
-              />
-              <figcaption>
-                <span>02 · FILM</span>
-                <span>9:16 · 4K</span>
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure class="feed-card">
-              <img
-                src="https://ecombos.ai/assets/aurelia-04-architecture-DmknNOY9.jpg"
-                alt="Architectural still in 9:16"
-              />
-              <figcaption>
-                <span>03 · ARCH</span>
-                <span>9:16 · 4K</span>
-              </figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure class="feed-card">
-              <img
-                src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/91561e106e7b4b.png"
-                alt="4K clasp engraving in 9:16"
-              />
-              <figcaption>
-                <span>04 · TYPE</span>
-                <span>9:16 · 4K</span>
-              </figcaption>
-            </figure>
-          </li>
-        </ul>
+        <div class="template-grid" id="template-grid">
+          <article class="template-card">
+            <img src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/4832f1bcac19e0.jpg" alt="AURELIA Mediterranean film" width="1536" height="1024" loading="lazy" />
+            <div class="template-copy">
+              <p>AURELIA · FILM</p>
+              <h3>MEDITERRANEAN</h3>
+            </div>
+          </article>
+          <article class="template-card">
+            <img src="https://ecombos.ai/assets/aurelia-04-architecture-DmknNOY9.jpg" alt="AURELIA architecture still" width="1536" height="1024" loading="lazy" />
+            <div class="template-copy">
+              <p>AURELIA · STILL</p>
+              <h3>ARCHITECTURE</h3>
+            </div>
+          </article>
+          <article class="template-card">
+            <img src="https://ecombos.ai/hv2-videos/aurelia-paris.jpg" alt="AURELIA UGC Paris" width="1536" height="1024" loading="lazy" />
+            <div class="template-copy">
+              <p>AURELIA · UGC</p>
+              <h3>PARIS</h3>
+            </div>
+          </article>
+          <article class="template-card">
+            <img src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/91561e106e7b4b.png" alt="AURELIA 4K clasp" width="1536" height="1024" loading="lazy" />
+            <div class="template-copy">
+              <p>AURELIA · TYPE</p>
+              <h3>4K CLASP</h3>
+            </div>
+          </article>
+        </div>
       </section>
 
-      <section class="gpt" id="type" aria-labelledby="gpt-title">
-        <div class="section-kicker">
-          <p class="eyebrow">GPT Image 2</p>
-          <h2 id="gpt-title">4K type that actually reads.</h2>
-          <p class="section-lead">
-            Packshot, engraving, on-body — the word AURELIA survives the crop, the grade, and the
-            motion.
-          </p>
+      <section class="wrap feed-sec" aria-labelledby="feed-title">
+        <p class="mono-kicker">06 / SHIP — AURELIA-2703</p>
+        <h2 id="feed-title">Ship the campaign <em>in 9:16.</em></h2>
+        <p class="lede feed-lede">
+          Same necklace, four frames. Packshot, Mediterranean film, architecture, 4K clasp — native 9:16 for Reels, TikTok, and Shorts.
+        </p>
+
+        <div class="phones">
+          <figure class="phone job">
+            <img src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/2b7cf7ba6ce78e.png" alt="AURELIA packshot in 9:16" />
+            <div class="phone-ui">
+              <div class="status"><span>9:41</span><span>4K</span></div>
+              <div class="island"></div>
+              <div class="caption">
+                <strong>AURELIA · SS26</strong>
+                <p>PACKSHOT · 9:16 · 4:5 crop</p>
+              </div>
+            </div>
+            <figcaption>WORLD 02 <span>PACKSHOT · 9:16</span></figcaption>
+          </figure>
+
+          <figure class="phone job">
+            <img src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/4832f1bcac19e0.jpg" alt="AURELIA film in 9:16" />
+            <div class="phone-ui">
+              <div class="status"><span>9:41</span><span>4K</span></div>
+              <div class="island"></div>
+              <div class="caption">
+                <strong>AURELIA · SS26</strong>
+                <p>FILM · 9:16 · MEDITERRANEAN</p>
+              </div>
+            </div>
+            <figcaption>WORLD 01 <span>FILM · 9:16</span></figcaption>
+          </figure>
+
+          <figure class="phone job">
+            <img src="https://ecombos.ai/assets/aurelia-04-architecture-DmknNOY9.jpg" alt="AURELIA architecture in 9:16" />
+            <div class="phone-ui">
+              <div class="status"><span>9:41</span><span>4K</span></div>
+              <div class="island"></div>
+              <div class="caption">
+                <strong>AURELIA · SS26</strong>
+                <p>ARCHITECTURE · 9:16</p>
+              </div>
+            </div>
+            <figcaption>WORLD 03 <span>ARCH · 9:16</span></figcaption>
+          </figure>
+
+          <figure class="phone job">
+            <img src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/91561e106e7b4b.png" alt="AURELIA clasp in 9:16" />
+            <div class="phone-ui">
+              <div class="status"><span>9:41</span><span>4K</span></div>
+              <div class="island"></div>
+              <div class="caption">
+                <strong>AURELIA · SS26</strong>
+                <p>TYPE · 9:16 · 4K CLASP</p>
+              </div>
+            </div>
+            <figcaption>WORLD 05 <span>CLASP · 9:16</span></figcaption>
+          </figure>
         </div>
-        <ul class="strip">
-          <li>
-            <figure>
-              <img
-                src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/2b7cf7ba6ce78e.png"
-                alt="AURELIA packshot"
-              />
-              <figcaption>Packshot</figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img
-                src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/91561e106e7b4b.png"
-                alt="AURELIA 4K engraving"
-              />
-              <figcaption>Engraving</figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img
-                src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/4832f1bcac19e0.jpg"
-                alt="AURELIA on-body film still"
-              />
-              <figcaption>On-body</figcaption>
-            </figure>
-          </li>
-        </ul>
+
+        <div class="format-bar">
+          <div class="format-copy">
+            <div>One necklace.</div>
+            <div class="volt-italic">Every ratio.</div>
+            <p>Packshot, film, architecture, clasp. Same file, every channel.</p>
+          </div>
+          <div class="format-item"><b>9:16</b><span>REELS</span></div>
+          <div class="format-item"><b>1:1</b><span>GRID</span></div>
+          <div class="format-item"><b>16:9</b><span>YOUTUBE</span></div>
+          <div class="format-item"><b>4:5</b><span>FEED</span></div>
+          <div class="format-item volt"><b>4K</b><span>EXPORT</span></div>
+        </div>
       </section>
 
-      <section class="modules" id="product" aria-labelledby="modules-title">
-        <div class="section-kicker">
-          <p class="eyebrow">Modules</p>
-          <h2 id="modules-title">Score it. Decode it. Ship it from the IDE.</h2>
+      <section class="wrap gpt-sec" aria-labelledby="gpt-title">
+        <div class="gpt-card">
+          <div class="gpt-left">
+            <p class="gpt-kicker">GPT IMAGE 2 · AURELIA-2703</p>
+            <h2 id="gpt-title">4K type that reads.</h2>
+            <p>Packshot, engraving, on-body — AURELIA survives the crop.</p>
+            <a class="btn-white" href="https://ecombos.ai/gpt-image-2">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                <path d="M12 2l1.8 5.5L19 9.3l-5.2 1.8L12 17l-1.8-5.9L5 9.3l5.2-1.8L12 2zm7 13l.9 2.8L23 18l-3.1.9L19 22l-.9-3.1L15 18l3.1-.9L19 15zM5 14l.7 2.1L8 17l-2.3.7L5 20l-.7-2.3L2 17l2.3-.9L5 14z" />
+              </svg>
+              Try Model
+            </a>
+            <img
+              class="chrome-mark"
+              src="https://ecombos.ai/assets/hero-chrome-logo-CQq1s_U8.png"
+              alt="GPT Image 2 chrome mark"
+              width="560"
+              height="560"
+              loading="lazy"
+            />
+          </div>
+          <div class="poster-grid aurelia-proofs">
+            <figure>
+              <img src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/2b7cf7ba6ce78e.png" alt="AURELIA packshot" loading="lazy" />
+              <figcaption>PACKSHOT</figcaption>
+            </figure>
+            <figure>
+              <img src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/91561e106e7b4b.png" alt="AURELIA 4K engraving" loading="lazy" />
+              <figcaption>ENGRAVING</figcaption>
+            </figure>
+            <figure>
+              <img src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/4832f1bcac19e0.jpg" alt="AURELIA on-body film still" loading="lazy" />
+              <figcaption>ON-BODY</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrap modules-sec" aria-labelledby="modules-title">
+        <div class="section-head">
+          <div>
+            <p class="sec-kicker">— FEATURED MODULES</p>
+            <h2 id="modules-title">Build the whole <em>campaign.</em></h2>
+          </div>
+          <div class="round-nav" aria-hidden="true">
+            <button type="button" class="round-btn" aria-label="Previous modules">‹</button>
+            <button type="button" class="round-btn" aria-label="Next modules">›</button>
+          </div>
         </div>
         <div class="module-grid">
-          <article class="card module-virality">
-            <p class="eyebrow">Virality</p>
-            <p class="score">8.4</p>
-            <p class="score-sub">AURELIA-2703 · film 01</p>
-            <dl class="meters">
-              <div>
-                <dt>Hook</dt>
-                <dd><span style="--w: 88%"></span>1.2s to gold</dd>
+          <a class="module live" href="https://ecombos.ai/ad-decoder">
+            <div class="mod-chips">
+              <span class="chip">PREDICTIVE</span>
+              <span class="now-live"><i></i>NOW LIVE</span>
+            </div>
+            <div class="mod-visual">
+              <div class="score-card">
+                <div class="score-kicker">AURELIA-2703 · FILM 01</div>
+                <div class="score-num">8.<span>4</span><small>/10</small></div>
+                <div class="score-bar"><i></i></div>
+                <div class="score-row"><span>HOOK</span><span>STRONG</span></div>
+                <div class="score-row mute"><span>HOLD RATE</span><span>78%</span></div>
               </div>
-              <div>
-                <dt>Hold</dt>
-                <dd><span style="--w: 76%"></span>clasp as beat</dd>
+            </div>
+            <div class="mod-foot">
+              <h3><i></i> VIRALITY PREDICTOR</h3>
+              <p>Score AURELIA-2703 film 01 before you spend a dollar — hook, hold rate, retention.</p>
+            </div>
+          </a>
+
+          <a class="module live" href="https://ecombos.ai/ad-decoder">
+            <div class="mod-chips">
+              <span class="chip">DROP-IN</span>
+              <span class="now-live"><i></i>NOW LIVE</span>
+            </div>
+            <div class="mod-visual">
+              <div class="ref-grid">
+                <i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i><i></i><i></i>
               </div>
-              <div>
-                <dt>Recall</dt>
-                <dd><span style="--w: 84%"></span>AURELIA oval</dd>
-              </div>
-            </dl>
-          </article>
-          <article class="card">
-            <p class="eyebrow">Ad Decoder</p>
-            <h3>Read a reference. Get the shot list.</h3>
-            <p>
-              Lens, grade, product scale, end-card. Paste a frame; EcomBos writes the board the
-              operator would have written by hand.
-            </p>
-            <p class="module-foot">AURELIA decode · 12 shots · 00:10</p>
-          </article>
-          <article class="card" id="mcp">
-            <p class="eyebrow"><span class="chip-dot" aria-hidden="true"></span> MCP</p>
-            <h3>Generate from Cursor, Claude, or Cline.</h3>
-            <p>
-              Same studio, no tab hop. Endpoint
-              <a href="https://mcp.ecombos.ai">mcp.ecombos.ai</a> — live.
-            </p>
-            <p class="module-foot">Drop a photo in chat. Get AURELIA-2703.</p>
-          </article>
+            </div>
+            <div class="mod-foot">
+              <h3><i></i> AD REFERENCE</h3>
+              <p>Drop any viral ad. Recreate it shot-for-shot with your product in seconds.</p>
+            </div>
+          </a>
+
+          <a class="module live hook" href="https://ecombos.ai/marketing-studio">
+            <img
+              class="hook-bg"
+              src="https://uemglyheqrjfpanjsjkh.supabase.co/functions/v1/media-redirect/4832f1bcac19e0.jpg"
+              alt=""
+            />
+            <div class="mod-chips">
+              <span class="chip">UGC</span>
+              <span class="now-live"><i></i>NOW LIVE</span>
+            </div>
+            <div class="mod-visual">
+              <div class="atten">ATTEN</div>
+            </div>
+            <div class="mod-foot">
+              <h3><i></i> HOOK STUDIO</h3>
+              <p>Proven UGC openers, set anywhere you can imagine. Stop the scroll on frame one.</p>
+            </div>
+          </a>
+
+          <a class="module live" href="https://ecombos.ai/mcp">
+            <div class="mod-chips">
+              <span class="chip">MCP</span>
+              <span class="now-live"><i></i>NOW LIVE</span>
+            </div>
+            <div class="mod-visual">
+              <div class="mcp-mark">MCP</div>
+              <div class="mcp-sub">CLAUDE · CURSOR · CLINE</div>
+            </div>
+            <div class="mod-foot">
+              <h3><i></i> MCP INTEGRATION</h3>
+              <p>Generate ads straight from your IDE or chat client. One protocol, every editor.</p>
+            </div>
+          </a>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="footer-brand">
-        <a class="brand" href="#main">
-          <img class="brand-mark" src="https://ecombos.ai/eb-logo.png" width="28" height="28" alt="" />
-          <span class="brand-name">EcomBos</span>
-        </a>
-        <p>Creative studio for ecommerce. This page is a 2026 design mock — not production.</p>
-      </div>
-      <nav class="footer-nav" aria-label="Footer">
+      <div class="wrap footer-grid">
+        <div class="footer-brand">
+          <a class="footer-lockup" href="https://ecombos.ai/">
+            <img src="https://ecombos.ai/eb-logo-white.png" width="40" height="40" alt="" />
+            <span>EcomBos</span>
+          </a>
+          <p>EcomBos: AI tools for product content, ads, and marketing, built for e-commerce sellers.</p>
+          <div class="social">
+            <a href="https://www.youtube.com/@ecombos" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 00.5 6.2 31 31 0 000 12a31 31 0 00.5 5.8 3 3 0 002.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 002.1-2.1A31 31 0 0024 12a31 31 0 00-.5-5.8zM9.6 15.5V8.5L15.8 12l-6.2 3.5z"/></svg>
+            </a>
+            <a href="https://discord.gg/YK53f8S9tP" aria-label="Discord" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20.3 4.4A19 19 0 0015.6 3l-.3.5a17.4 17.4 0 014 1.6 13 13 0 00-13.6 0 17 17 0 014-1.6L9.4 3A19 19 0 003.7 4.4C.5 9.2-.3 13.8.1 18.4A19.3 19.3 0 006 21l.8-1.3a12.6 12.6 0 01-2-.9l.5-.4c4 1.8 8.3 1.8 12.3 0l.5.4c-.6.4-1.3.7-2 .9L18 21a19.2 19.2 0 005.9-2.6c.5-5.3-.8-9.8-3.6-14zM8.4 15.5c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-1 2.4-2.1 2.4zm7.2 0c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/ecombos_ai/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@ecombosai" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19.6 7.4a6.6 6.6 0 01-3.8-1.2v8.1a6.3 6.3 0 11-5.4-6.2v2.8a3.5 3.5 0 103.1 3.5V2h2.6a6.6 6.6 0 003.5 5.4z"/></svg>
+            </a>
+            <a href="https://x.com/EcomBos_ai" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.2 2H21l-6.6 7.5L22 22h-6.2l-4.8-7-5.5 7H2.2l7-8L2 2h6.3l4.4 6.4L18.2 2zm-1.1 18h1.7L7 3.9H5.2L17.1 20z"/></svg>
+            </a>
+          </div>
+        </div>
+
         <div>
-          <h2>Product</h2>
+          <h2>PRODUCT</h2>
           <ul>
             <li><a href="https://ecombos.ai/ai-studio">Product Studio</a></li>
             <li><a href="https://ecombos.ai/ai-studio">Video Studio</a></li>
@@ -441,14 +708,14 @@
           </ul>
         </div>
         <div>
-          <h2>Resources</h2>
+          <h2>RESOURCES</h2>
           <ul>
             <li><a href="https://ecombos.ai/examples">Examples</a></li>
             <li><a href="https://ecombos.ai/features">Features</a></li>
           </ul>
         </div>
         <div>
-          <h2>Company</h2>
+          <h2>COMPANY</h2>
           <ul>
             <li><a href="https://ecombos.ai/pricing">Pricing</a></li>
             <li><a href="https://ecombos.ai/affiliate">Affiliate Program</a></li>
@@ -456,7 +723,7 @@
           </ul>
         </div>
         <div>
-          <h2>Support</h2>
+          <h2>SUPPORT</h2>
           <ul>
             <li><a href="https://ecombos.ai/help">Help Center</a></li>
             <li><a href="https://ecombos.ai/terms">Terms of Service</a></li>
@@ -464,11 +731,30 @@
             <li><a href="https://ecombos.ai/community">Community</a></li>
           </ul>
         </div>
-      </nav>
-      <p class="legal">© 2026 EcomBos. Mock · AURELIA-2703.</p>
+      </div>
+      <div class="wrap legal">
+        <p>© 2026 EcomBos. All rights reserved.</p>
+        <p class="follow">
+          Follow us:
+          <a href="https://www.youtube.com/@ecombos" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 00.5 6.2 31 31 0 000 12a31 31 0 00.5 5.8 3 3 0 002.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 002.1-2.1A31 31 0 0024 12a31 31 0 00-.5-5.8zM9.6 15.5V8.5L15.8 12l-6.2 3.5z"/></svg>
+          </a>
+          <a href="https://discord.gg/YK53f8S9tP" aria-label="Discord" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M20.3 4.4A19 19 0 0015.6 3l-.3.5a17.4 17.4 0 014 1.6 13 13 0 00-13.6 0 17 17 0 014-1.6L9.4 3A19 19 0 003.7 4.4C.5 9.2-.3 13.8.1 18.4A19.3 19.3 0 006 21l.8-1.3a12.6 12.6 0 01-2-.9l.5-.4c4 1.8 8.3 1.8 12.3 0l.5.4c-.6.4-1.3.7-2 .9L18 21a19.2 19.2 0 005.9-2.6c.5-5.3-.8-9.8-3.6-14zM8.4 15.5c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-1 2.4-2.1 2.4zm7.2 0c-1.2 0-2.1-1.1-2.1-2.4s.9-2.4 2.1-2.4 2.2 1.1 2.1 2.4c0 1.3-.9 2.4-2.1 2.4z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/ecombos_ai/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@ecombosai" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M19.6 7.4a6.6 6.6 0 01-3.8-1.2v8.1a6.3 6.3 0 11-5.4-6.2v2.8a3.5 3.5 0 103.1 3.5V2h2.6a6.6 6.6 0 003.5 5.4z"/></svg>
+          </a>
+          <a href="https://x.com/EcomBos_ai" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M18.2 2H21l-6.6 7.5L22 22h-6.2l-4.8-7-5.5 7H2.2l7-8L2 2h6.3l4.4 6.4L18.2 2zm-1.1 18h1.7L7 3.9H5.2L17.1 20z"/></svg>
+          </a>
+        </p>
+      </div>
     </footer>
 
-    <input id="file" class="sr-only" type="file" accept="image/*" />
     <script src="app.js" defer></script>
   </body>
 </html>
